@@ -1,0 +1,21 @@
+* fe15557 (HEAD -> main, tag: v1.1.0, tag: v1.0.0) Revert 'Bad commit'
+* 998798a Bad commit
+| * d2b9aa4 (origin/feature/another-feature, feature/another-feature) feat: Add test feature
+| * 59012bd docs: Update README
+|/  
+* a6c34f4 (origin/main) feat: Add new feature
+* 4d77f1b docs: Add FAQ section
+| * db956aa (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+|/  
+*   8f70008 Merge: Resolve conflicts with conflict-simulator branch
+|\  
+| * d3dd9b2 (instructor/conflict-simulator) updating conflict-simulator
+* | 26347e5 Fix: Update package.json to run monitor.js
+* |   6d5a049 Merge: Resolved conflicts between main and dev
+|\ \  
+| * | 02011a5 (instructor/dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit

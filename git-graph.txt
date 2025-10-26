@@ -1,0 +1,36 @@
+* 1c3d55a (HEAD -> main) Add previously untracked files
+*   c309e7b (origin/main, origin/HEAD) Merge pull request #2 from rajesh00618/feature/another-feature
+|\  
+| *   3f19087 (origin/feature/another-feature) Merge branch 'main' into feature/another-feature
+| |\  
+| |/  
+|/|   
+* |   c211a27 Merge pull request #1 from rajesh00618/feature/new-feature
+|\ \  
+| * | db956aa (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+* | | 21f6f6c README for Git Mastery Challenge
+* | | 39bce98 README
+| | * d2b9aa4 (feature/another-feature) feat: Add test feature
+| | * 59012bd docs: Update README
+| |/  
+|/|   
+| | * d96aaaa (tag: v1.0) docs: Add final project artifacts
+| | * fe15557 (tag: v1.1.0, tag: v1.0.0) Revert 'Bad commit'
+| | * 998798a Bad commit
+| |/  
+|/|   
+* | a6c34f4 feat: Add new feature
+* | 4d77f1b docs: Add FAQ section
+|/  
+*   8f70008 Merge: Resolve conflicts with conflict-simulator branch
+|\  
+| * d3dd9b2 (instructor/conflict-simulator) updating conflict-simulator
+* | 26347e5 Fix: Update package.json to run monitor.js
+* |   6d5a049 Merge: Resolved conflicts between main and dev
+|\ \  
+| * | 02011a5 (instructor/dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit

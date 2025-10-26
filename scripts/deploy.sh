@@ -75,4 +75,4 @@ else
     exit 1
 fi
 
-echo "Deployment completed successfully!"
+echo "Deployment completed successfully!""BUG" 

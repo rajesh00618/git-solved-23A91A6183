@@ -36,3 +36,23 @@ notifications:
   slack_webhook: "https://hooks.slack.com/services/XXX"
   discord_webhook: "https://discord.com/api/webhooks/YYY"
   email_alerts: false
+
+# --- Experimental Features (from conflict-simulator) ---
+# The following configurations are for experimental mode and are not active.
+
+# ai_features:
+#   predictive_scaling: true
+#   anomaly_detection: true
+#   auto_optimization: true
+#   model_version: "v2.1.0"
+# 
+# cloud_providers:
+#   - aws
+#   - azure
+#   - gcp
+#   - digitalocean
+# 
+# security:
+#   zero_trust: enabled
+#   encryption: AES-256
+#   audit_logging: comprehensive

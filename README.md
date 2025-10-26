@@ -29,6 +29,7 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 -  Enhanced logging
 -  Mock external APIs
 
+### Experimental Features (from conflict-simulator)
 ## Quick Start
 
 ### Production Mode

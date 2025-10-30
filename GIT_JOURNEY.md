@@ -80,9 +80,50 @@ merge conflicts across multiple branches using proper Git workflows.
 - **Difficulty**: Easy
 - **Time**: 10 minutes
 
-### Merge 2: main + conflict-simulator (6 files)
+## Merge 2: main + conflict-simulator (6 files)
 
-[Document the second set of conflicts similarly]
+### Conflict 1: config/app-config.yaml
+- **Issue:** Simulator branch added an extra port and test environment.
+- **Resolution:** Added a dedicated `simulator` (or `test`) config section, with clear comments marking it as non-production. Simulator port is present but commented or disabled by default.
+- **Strategy:** Main config includes `production` (default), `development`, and a `simulator/test` config block, all separated with clear documentation and comments for safe toggling.
+- **Difficulty:** Medium
+- **Time:** 10 minutes
+
+### Conflict 2: config/database-config.json
+- **Issue:** Simulator used a mock database.
+- **Resolution:** Added a `simulator` profile, but `production` remains default, with `simulator` settings clearly marked and not enabled by default. Structured so each environment (production, development, simulator) can be toggled individually.
+- **Strategy:** Main JSON has `production`, `development`, and `simulator` keys. Simulator is only used by explicitly setting the environment.
+- **Difficulty:** Medium
+- **Time:** 10 minutes
+
+### Conflict 3: scripts/deploy.sh
+- **Issue:** Simulator introduced new simulated deployment steps.
+- **Resolution:** All environments (`production`, `development`, `simulator`) handled with a case/switch logic based on the `DEPLOY_ENV` or a new `--simulate` flag. Experimental steps are only run when simulator env or flag is present, fully documented in code comments.
+- **Strategy:** Default logic is always for production. Development and simulator logic are included but separated and only active if explicitly triggered via `DEPLOY_ENV` or `--simulate`.
+- **Difficulty:** Hard
+- **Time:** 20 minutes
+
+### Conflict 4: scripts/monitor.js
+- **Issue:** Conflict between simulated logging/stats and standard logging.
+- **Resolution:** Integrated logging config so that simulated statistics and additional metrics are only collected if a `SIMULATOR_MODE` or similar flag is set.
+- **Strategy:** Main section is for standard/production logging; experimental/simulated output is wrapped in feature-flag code or marked as comments. Simulator logic never runs unless the flag is on.
+- **Difficulty:** Medium
+- **Time:** 15 minutes
+
+### Conflict 5: docs/architecture.md
+- **Issue:** Simulator branch included special workflow and diagrams.
+- **Resolution:** Added a new section titled “Simulation Mode Architecture” after the main and dev workflows. Noted clearly in the doc that “Simulation Mode is for feature testing only; not enabled in production deploys.” All diagrams and workflows are labeled appropriately.
+- **Strategy:** Production and development remain the primary documentation; simulation mode is extra and fully documented as non-prod.
+- **Difficulty:** Easy
+- **Time:** 10 minutes
+
+### Conflict 6: README.md
+- **Issue:** New simulator features/version information.
+- **Resolution:** Features table reorganized by mode. Simulator features are clearly separated in their own section, and a warning is added that these are experimental/not recommended for production. Versions for each environment are shown separately.
+- **Strategy:** Production is first, development second, simulation third with experimental badge/warning.
+- **Difficulty:** Easy
+- **Time:** 10 minutes
+
 
 ## Most Challenging Parts
 
